@@ -289,7 +289,7 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
 
             }
 
-            profilePictureView.setVisibility(View.VISIBLE);
+            profilePictureView.setVisibility(View.GONE);
             Name.setVisibility(View.GONE);
             Email.setVisibility(View.GONE);
 
