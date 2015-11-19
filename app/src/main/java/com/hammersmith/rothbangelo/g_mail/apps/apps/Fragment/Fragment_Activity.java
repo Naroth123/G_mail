@@ -278,6 +278,7 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
         }
         if(profile == null){
 
+
             profilePictureView.setProfileId(null);
             Name.setText("");
             Email.setText("");
@@ -288,7 +289,7 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
 
             }
 
-            profilePictureView.setVisibility(View.GONE);
+            profilePictureView.setVisibility(View.VISIBLE);
             Name.setVisibility(View.GONE);
             Email.setVisibility(View.GONE);
 
