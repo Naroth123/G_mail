@@ -99,10 +99,6 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
     private Profile pendingUpdateUser;
 
 
-
-
-
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -135,26 +131,22 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
 //        accessTokenTracker.stopTracking();
 //        profileTracker.startTracking();
     }
-
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
        View v = inflater.inflate(R.layout.fragment_main,container,false);
 
 
-
+        //Edit Text
         eName = (EditText) v.findViewById(txtemail);
         ePassword = (EditText) v.findViewById(txtpassword);
 
-
-
+        //Text input layout
         inputLayout_email = (TextInputLayout) v.findViewById(R.id.input_layout_email);
         inputLayout_password = (TextInputLayout) v.findViewById(R.id.input_layout_password);
         //to show info fb
         Name = (TextView) v.findViewById(R.id.name);
         Email = (TextView)v.findViewById(R.id.Email);
-
 
         //to show info about Gmail
         mName = (TextView) v.findViewById(R.id.tv_name);
@@ -166,10 +158,7 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
             profileFb(pendingUpdateUser);
             pendingUpdateUser = null;
 
-
         }
-
-
 
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -188,8 +177,6 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
                     Profile profile = Profile.getCurrentProfile();
                     if (profile != null) {
                         profileFb(profile);
-
-
                     }
                 }
             }
@@ -208,7 +195,6 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
 //    {END FACEBOOK}
 ////
 //        START GMAIL
-
         log_o = (Button) v.findViewById(R.id.sign_out);
         log_o.setOnClickListener(this);
         btn_g = (SignInButton) v.findViewById(R.id.sign_in_G);
@@ -229,17 +215,12 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
         btn_f.setFragment(this);
         RequestData();
 
-
-
             inputLayout_email.setVisibility(View.VISIBLE);
             inputLayout_password.setVisibility(View.VISIBLE);
             btn_g.setVisibility(View.VISIBLE);
             Name.setVisibility(View.GONE);
             Email.setVisibility(View.GONE);
             profilePictureView.setVisibility(View.GONE);
-
-
-
 
     }
 
@@ -279,8 +260,6 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
 
 
     }
-
-
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
