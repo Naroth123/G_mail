@@ -180,7 +180,6 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
                     }
                 }
             }
-
             @Override
             public void onCancel() {
 
@@ -221,10 +220,9 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
             Name.setVisibility(View.GONE);
             Email.setVisibility(View.GONE);
             profilePictureView.setVisibility(View.GONE);
-
     }
 
-        @Override
+    @Override
     public void onStop() {
         super.onStop();
         accessTokenTracker.stopTracking();
@@ -257,10 +255,7 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
         super.onDestroy();
         accessTokenTracker.stopTracking();
          AppEventsLogger.deactivateApp(getActivity());
-
-
     }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
