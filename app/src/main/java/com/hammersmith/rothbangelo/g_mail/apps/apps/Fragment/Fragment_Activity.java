@@ -102,7 +102,6 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        FacebookSdk.sdkInitialize(getActivity().getApplicationContext());
         FacebookSdk.sdkInitialize(getActivity().getApplicationContext());
         buildGoogleApiClient(null);
 
@@ -159,7 +158,7 @@ public class Fragment_Activity extends Fragment implements View.OnClickListener,
             pendingUpdateUser = null;
 
         }
-
+        //login fb
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
